@@ -5,9 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+  
 jobs:
+
   build:
+    env:
+      working-directory: ./all-rules
 
     runs-on: ubuntu-latest
 
