@@ -1,0 +1,11 @@
+name: flawfinder
+on: [push]
+
+jobs:
+  build:
+    name: flawfinder-action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: flawfinder-action 
+        uses: deep5050/flawfinder-action@master
