@@ -3,6 +3,8 @@ on: [push]
 
 jobs:
   build:
+    env:
+      working-directory: ./all-rules
     name: flawfinder-action
     runs-on: ubuntu-latest
     steps:
