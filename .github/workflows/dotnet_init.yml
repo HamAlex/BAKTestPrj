@@ -1,4 +1,4 @@
-name: .NET
+name: .NET init
 
 on:
   push:
