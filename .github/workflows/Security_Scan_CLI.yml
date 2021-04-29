@@ -17,8 +17,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Install DevSkim
+    - name: Install security-scan
       run: dotnet tool install --global security-scan
       
-    - name: Run DevSkim
+    - name: Run security-scan
       run: security-scan ./all-rules/all-rules.sln
