@@ -1,0 +1,24 @@
+name: Security_Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Install DevSkim
+      run: dotnet tool install --global security-scan
+      
+    - name: Run DevSkim
+      run: security-scan /all-rules/all-rules.sln
