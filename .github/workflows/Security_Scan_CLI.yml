@@ -1,4 +1,4 @@
-name: Security_Scan
+name: Security_Scan_CLI
 
 on:
   push:
@@ -21,4 +21,4 @@ jobs:
       run: dotnet tool install --global security-scan
       
     - name: Run DevSkim
-      run: security-scan /all-rules/all-rules.sln
+      run: security-scan ./all-rules/all-rules.sln
