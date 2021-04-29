@@ -30,7 +30,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run StyleCop
         run: |
-           .\stylecopcli_1.4.0.0_bin\StyleCopCLI.exe -cs .\all-rules\*
+           .\stylecopcli_1.4.0.0_bin\StyleCopCLI.exe -r -cs .\all-rules\* > $1
       - uses: actions/upload-artifact@v2
         with:
           name: result
